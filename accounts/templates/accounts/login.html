@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}Login{% endblock %}
+
+{% block content %}
+<div class="row mt-4">
+    <div class="col-md-6 mx-auto">
+        <h2 class="mb-4">Форма входа</h2>
+        <form method="POST" action="">{% csrf_token %}
+            <div class="form-group">
+                {{form.as_p}}
+            </div>
+            <button class="btn btn-primary" type="submit" value="submit">Войти</button>
+        </form>
+        <a href="{% url 'register' %}" class="btn btn-secondary btn-lg mt-3">Зарегистрироваться</a>
+    </div>
+</div>
+{% endblock %}

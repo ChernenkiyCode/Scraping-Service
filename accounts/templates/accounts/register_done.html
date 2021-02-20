@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}Registration complete{% endblock %}
+
+{% block content %}
+    <div class="row mt-4">
+    <div class="col-md-6 mx-auto">
+        <h2 class="mb-4">Регестрация аккаунта <strong>{{ new_user.email }}</strong> завершена успешно!</h2>
+        <a href="{% url 'login' %}" class="btn btn-success">Войти</a>
+    </div>
+</div>
+{% endblock %}

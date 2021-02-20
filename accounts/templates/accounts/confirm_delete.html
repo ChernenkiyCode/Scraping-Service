@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}Delete account{% endblock %}
+
+{% block content %}
+<div class="row mt-4">
+    <div class="col-md-6 mx-auto">
+        <h2 class="mb-4">Вы действительно хотите удалить аккаунт <strong>{{ user.email }}</strong> ?</h2>
+        <form method="POST" action="">{% csrf_token %}
+            <button class="btn btn-danger" type="submit" value="submit">Удалить</button>
+        </form>
+        <a href="{% url 'home' %}" class="btn btn-warning mt-3">Отменить</a>
+    </div>
+</div>
+{% endblock %}

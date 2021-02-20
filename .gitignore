@@ -1,0 +1,15 @@
+smtpdata.sh
+
+/accounts/__pycache__
+
+/accounts/migrations
+
+/scraping_service/__pycache__
+
+/scraping_service/migrations
+
+/scraping/__pycache__
+
+/scraping/migrations
+
+scraping.json
