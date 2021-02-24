@@ -1,4 +1,3 @@
-import jsonfield as jsonfield
 from django.db import models
 from .utils import from_cyrillic_to_eng
 
@@ -59,7 +58,7 @@ class Vacancy(models.Model):
 
 
 class Error(models.Model):
-    data = jsonfield.JSONField()
+    data = models.JSONField()
     timestamp = models.DateField(auto_now_add=True)
 
     class Meta:
@@ -72,7 +71,7 @@ class Error(models.Model):
 class Url(models.Model):
     city = models.ForeignKey('City', on_delete=models.PROTECT, verbose_name='Город')
     language = models.ForeignKey('Language', on_delete=models.PROTECT, verbose_name='Язык програмирования')
-    url_data = jsonfield.JSONField(default=default_urls)
+    url_data = models.JSONField(default=default_urls)
 
     class Meta:
         unique_together = ('city', 'language')
